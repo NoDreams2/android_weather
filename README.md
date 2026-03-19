@@ -1,17 +1,15 @@
-# Инструкция по сборке APK
+## 1. Клонирование репозитория
+```bash
+git clone https://github.com/NoDreams2/android_weather.git
+cd android_weather
 
-### 1. Склонируйте репозиторий:
+## 2. Настройка local.properties
+Создайте файл local.properties в корне проекта и укажите путь к Android SDK:
+echo "sdk.dir=C\:\\Users\\%USERNAME%\\AppData\\Local\\Android\\Sdk" > local.properties
 
-```git clone https://github.com/NoDreams2/android_weather.git```
+## 3. Сборка APK
+./gradlew clean
+./gradlew assembleDebug
 
-### 2. Перейдите в папку:
-
-```cd android_weather```
-
-### 3. Соберите APK:
-
-```./gradlew assembleDebug```
-
-### 4. APK находится в:
-
+## 4. Где найти APK
 app/build/outputs/apk/debug/app-debug.apk
