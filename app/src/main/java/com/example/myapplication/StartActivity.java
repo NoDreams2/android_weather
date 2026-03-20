@@ -15,6 +15,6 @@ public class StartActivity extends AppCompatActivity {
             Intent intent = new Intent(StartActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
-        }, 5000); // 5 секунд
+        }, 5000);
     }
 }
