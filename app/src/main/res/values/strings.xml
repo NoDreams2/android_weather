@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Погода</string>
     <string name="app_art">Приложение для проверки погоды</string>
+    <string name="weather">+5</string>
+    <string name="des">Солнечно</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="edit">Редактировать</string>
+    <string name="delete">Удалить</string>
+
 </resources>

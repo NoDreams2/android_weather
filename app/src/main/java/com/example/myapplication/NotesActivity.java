@@ -19,6 +19,7 @@ public class NotesActivity extends AppCompatActivity {
     private DatabaseHelper db;
     private LinearLayout notesContainer;
     private FloatingActionButton fabAddNote;
+    private Button backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +29,10 @@ public class NotesActivity extends AppCompatActivity {
         db = new DatabaseHelper(this);
         notesContainer = findViewById(R.id.notes_container);
         fabAddNote = findViewById(R.id.fab_add_note);
+        backButton = findViewById(R.id.back_button);
 
         fabAddNote.setOnClickListener(v -> showAddNoteDialog());
-
-        Button backButton = findViewById(R.id.back_button);
-        if (backButton != null) {
-            backButton.setOnClickListener(v -> finish());
-        }
+        backButton.setOnClickListener(v -> finish());
 
         loadNotes();
     }

@@ -36,7 +36,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    // CREATE
+    // Добавление новой заметки
     public void addNote(Note note) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -46,7 +46,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-    // READ all
+    // Получение всех заметок
     public List<Note> getAllNotes() {
         List<Note> notesList = new ArrayList<>();
         String selectQuery = "SELECT * FROM " + TABLE_NOTES;
@@ -68,7 +68,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return notesList;
     }
 
-    // UPDATE
+    // Обновление заметки
     public int updateNote(Note note) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -79,7 +79,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 new String[]{String.valueOf(note.getId())});
     }
 
-    // DELETE
+    // Удаление заметки
     public void deleteNote(Note note) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_NOTES, COLUMN_ID + " = ?",
